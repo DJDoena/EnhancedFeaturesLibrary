@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="EnhancedFeatures" type="EnhancedFeatures"/>
+  <xs:element name="EnhancedFeaturesList" type ="EnhancedFeaturesList" />
+
+  <xs:complexType name="EnhancedFeaturesList">
+    <xs:sequence>
+      <xs:element name="Profiles" type="Profiles" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Profiles">
+    <xs:sequence>
+      <xs:element name="Profile" type="Profile" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element name="EnhancedFeatures" type="EnhancedFeatures" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string" use="required" />
+    <xs:attribute name="Title" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="EnhancedFeatures">
+    <xs:sequence>
+      <xs:element name="Feature" type="Feature" minOccurs="0" maxOccurs="30" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Feature">
+    <xs:simpleContent>
+      <xs:extension base="xs:boolean">
+        <xs:attribute name="Index" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="DisplayName" type="xs:string" use="optional"/>
+        <xs:attribute name="Base64DisplayName" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
