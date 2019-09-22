@@ -3,7 +3,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-// xsd.exe /c /l:cs /f EnhancedFeatures.xsd /n:DoenaSoft.DVDProfiler.EnhancedFeatures
+// xsd.exe /c /l:cs /f /n:DoenaSoft.DVDProfiler.EnhancedFeatures EnhancedFeatures.xsd
 
 namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 {
@@ -42,8 +42,12 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                 using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
+                    xtw.Namespaces = false;
 
-                    XmlSerializer.Serialize(xtw, instance);
+                    var ns = new XmlSerializerNamespaces();
+                    ns.Add(string.Empty, string.Empty);
+
+                    XmlSerializer.Serialize(xtw, instance, ns);
                 }
             }
         }
@@ -78,7 +82,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 var instance = (EnhancedFeatures)(XmlSerializer.Deserialize(fs));
 
-                return (instance);
+                return instance;
             }
         }
 
@@ -89,8 +93,12 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                 using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
+                    xtw.Namespaces = false;
 
-                    XmlSerializer.Serialize(xtw, instance);
+                    var ns = new XmlSerializerNamespaces();
+                    ns.Add(string.Empty, string.Empty);
+
+                    XmlSerializer.Serialize(xtw, instance, ns);
                 }
             }
         }
