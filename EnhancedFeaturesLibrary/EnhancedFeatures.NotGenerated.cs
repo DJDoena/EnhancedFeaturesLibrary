@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
@@ -10,38 +9,37 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 {
     public sealed partial class EnhancedFeaturesList
     {
-        private static XmlSerializer s_XmlSerializer;
+        private static XmlSerializer _xmlSerializer;
 
         [XmlIgnore]
         public static XmlSerializer XmlSerializer
         {
             get
             {
-                if (s_XmlSerializer == null)
+                if (_xmlSerializer == null)
                 {
-                    s_XmlSerializer = new XmlSerializer(typeof(EnhancedFeaturesList));
+                    _xmlSerializer = new XmlSerializer(typeof(EnhancedFeaturesList));
                 }
 
-                return (s_XmlSerializer);
+                return _xmlSerializer;
             }
         }
 
-        public static EnhancedFeaturesList Deserialize(String fileName)
+        public static EnhancedFeaturesList Deserialize(string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                EnhancedFeaturesList instance = (EnhancedFeaturesList)(XmlSerializer.Deserialize(fs));
+                var instance = (EnhancedFeaturesList)(XmlSerializer.Deserialize(fs));
 
-                return (instance);
+                return instance;
             }
         }
 
-        public static void Serialize(EnhancedFeaturesList instance
-            , String fileName)
+        public static void Serialize(EnhancedFeaturesList instance, string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
-                using (XmlTextWriter xtw = new XmlTextWriter(fs, Encoding.UTF8))
+                using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
 
@@ -50,7 +48,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             }
         }
 
-        public void Serialize(String fileName)
+        public void Serialize(string fileName)
         {
             Serialize(this, fileName);
         }
@@ -58,38 +56,37 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
     public sealed partial class EnhancedFeatures
     {
-        private static XmlSerializer s_XmlSerializer;
+        private static XmlSerializer _xmlSerializer;
 
         [XmlIgnore]
         public static XmlSerializer XmlSerializer
         {
             get
             {
-                if (s_XmlSerializer == null)
+                if (_xmlSerializer == null)
                 {
-                    s_XmlSerializer = new XmlSerializer(typeof(EnhancedFeatures));
+                    _xmlSerializer = new XmlSerializer(typeof(EnhancedFeatures));
                 }
 
-                return (s_XmlSerializer);
+                return _xmlSerializer;
             }
         }
 
-        public static EnhancedFeatures Deserialize(String fileName)
+        public static EnhancedFeatures Deserialize(string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                EnhancedFeatures instance = (EnhancedFeatures)(XmlSerializer.Deserialize(fs));
+                var instance = (EnhancedFeatures)(XmlSerializer.Deserialize(fs));
 
                 return (instance);
             }
         }
 
-        public static void Serialize(EnhancedFeatures instance
-            , String fileName)
+        public static void Serialize(EnhancedFeatures instance, string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
-                using (XmlTextWriter xtw = new XmlTextWriter(fs, Encoding.UTF8))
+                using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
 
@@ -98,7 +95,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             }
         }
 
-        public void Serialize(String fileName)
+        public void Serialize(string fileName)
         {
             Serialize(this, fileName);
         }
