@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DoenaSoft.EnhancedFeatures.Interface</id>
+    <version>1.0.2</version>
+    <title>DoenaSoft.EnhancedFeatures.Interface</title>
+    <authors>DJ Doena</authors>
+    <icon>images\djdsoft.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/DJDoena/EnhancedFeaturesLibrary</projectUrl>
+    <description>Gives an interface layer for the COM plugin EnhancedFeatures for DVD Profiler</description>
+    <copyright>2017 - 2022</copyright>
+    <tags>dvd-profiler, dvdprofiler, invelos, EnhancedFeatures</tags>
+  </metadata>
+  <files>
+    <file src="bin\x64\Release\DoenaSoft.EnhancedFeatures.Interface.dll" target="build\x64\DoenaSoft.EnhancedFeatures.Interface.dll" />
+    <file src="bin\x64\Release\DoenaSoft.EnhancedFeatures.Interface.xml" target="build\x64\DoenaSoft.EnhancedFeatures.Interface.xml" />
+    <file src="bin\x64\Release\EnhancedFeatures.xsd" target="build\x64\EnhancedFeatures.xsd" />
+
+    <file src="bin\x86\Release\DoenaSoft.EnhancedFeatures.Interface.dll" target="build\x86\DoenaSoft.EnhancedFeatures.Interface.dll" />
+    <file src="bin\x86\Release\DoenaSoft.EnhancedFeatures.Interface.xml" target="build\x86\DoenaSoft.EnhancedFeatures.Interface.xml" />
+    <file src="bin\x86\Release\EnhancedFeatures.xsd" target="build\x86\EnhancedFeatures.xsd" />
+
+    <file src="EnhancedFeatures.Interface.props" target="build\net452" />
+
+    <file src="djdsoft.png" target="images\" />
+</files>
+</package>
