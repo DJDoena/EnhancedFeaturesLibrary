@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DoenaSoft.EnhancedFeatures.Interface</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>DoenaSoft.EnhancedFeatures.Interface</title>
     <authors>DJ Doena</authors>
     <icon>images\djdsoft.png</icon>
@@ -22,7 +22,7 @@
     <file src="bin\x86\Release\DoenaSoft.EnhancedFeatures.Interface.xml" target="build\x86\DoenaSoft.EnhancedFeatures.Interface.xml" />
     <file src="bin\x86\Release\EnhancedFeatures.xsd" target="build\x86\EnhancedFeatures.xsd" />
 
-    <file src="EnhancedFeatures.Interface.props" target="build\net452" />
+    <file src="DoenaSoft.EnhancedFeatures.Interface.props" target="build\net452" />
 
     <file src="djdsoft.png" target="images\" />
 </files>
