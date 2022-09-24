@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="EnhancedFeatures.Interface.nuspec" />
-    <None Include="EnhancedFeatures.Interface.props" />
+    <None Include="DoenaSoft.EnhancedFeatures.Interface.props" />
     <None Include="EnhancedFeaturesLibrary.snk" />
   </ItemGroup>
   <ItemGroup>
