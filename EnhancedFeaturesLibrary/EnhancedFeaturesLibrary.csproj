@@ -13,7 +13,7 @@
 		<Company>Doena Soft.</Company>
 		<Authors>DJ Doena</Authors>
 		<Description>Gives an interface layer for the COM plugin EnhancedFeatures for DVD Profiler</Description>
-		<Copyright>Copyright © Doena Soft. 2015 - 2023</Copyright>
+		<Copyright>Copyright © Doena Soft. 2017 - 2023</Copyright>
 		<PackageProjectUrl>https://github.com/DJDoena/MediaInfoHelper</PackageProjectUrl>
 		<PackageIcon>djdsoft.png</PackageIcon>
 		<RepositoryUrl>https://github.com/DJDoena/MediaInfoHelper</RepositoryUrl>
