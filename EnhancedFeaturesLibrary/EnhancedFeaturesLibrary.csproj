@@ -20,8 +20,8 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>dvd-profiler, dvdprofiler, invelos, EnhancedFeatures</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>2.0.2</Version>
-		<FileVersion>2.0.2</FileVersion>
+		<Version>2.0.3</Version>
+		<FileVersion>2.0.3</FileVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -29,7 +29,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="EnhancedFeatures.xsd" />
+		<EmbeddedResource Include="EnhancedFeatures.xsd">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -39,10 +41,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="EnhancedFeatures.xsd">
+		<Content Include="EnhancedFeatures.xsd">
 			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
+			<PackagePath>\Schema</PackagePath>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Include="djdsoft.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
