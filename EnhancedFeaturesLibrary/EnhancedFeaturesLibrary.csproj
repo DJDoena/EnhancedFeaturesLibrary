@@ -20,13 +20,17 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>dvd-profiler, dvdprofiler, invelos, EnhancedFeatures</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>2.0.1</Version>
-		<FileVersion>2.0.1</FileVersion>
+		<Version>2.0.2</Version>
+		<FileVersion>2.0.2</FileVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<NoWarn>1701;1702;1591</NoWarn>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="EnhancedFeatures.xsd" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="EnhancedFeatures.NotGenerated.cs">
@@ -35,6 +39,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="EnhancedFeatures.xsd">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 		<None Include="djdsoft.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
