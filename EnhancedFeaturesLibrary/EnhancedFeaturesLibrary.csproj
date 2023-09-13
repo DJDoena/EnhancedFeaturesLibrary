@@ -29,9 +29,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="EnhancedFeatures.xsd">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
+		<EmbeddedResource Include="EnhancedFeatures.xsd" />
 	</ItemGroup>
 
 	<ItemGroup>
